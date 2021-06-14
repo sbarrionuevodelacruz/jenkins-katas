@@ -25,5 +25,11 @@ pipeline {
       }
     }
 
+    stage('stash') {
+      steps {
+        sh 'git stash code'
+      }
+    }
+
   }
 }
